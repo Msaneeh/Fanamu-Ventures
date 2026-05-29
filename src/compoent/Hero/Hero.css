@@ -1,0 +1,129 @@
+.hero {
+    background: linear-gradient(135deg, var(--color-cream-bg), #EAF7EC);
+    padding: 70px 0 80px;
+}
+
+.hero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 48px;
+    max-width: 1400px; /* Optional helper to sync size with your navbar */
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-badge {
+    opacity: 0.9;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 40px;
+    color: var(--color-primary-green);
+    background: rgba(108, 194, 74, 0.2);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: var(--text-shadow-light);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--color-gray-soft);
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Base button layouts for fallback styling */
+.hero-buttons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    min-height: 450px; /* Enhanced height for rich desktop layouts */
+    box-shadow: var(--shadow-card);
+    background-size: cover;
+    background-position: center;
+    background-image: url('/assets/hero.png');
+    border-radius: 12px;
+}
+
+
+/* ==========================================================================
+   YOUR CUSTOM SCREENS / MEDIA QUERIES
+   ========================================================================== */
+
+/* md (Tablets / Medium Screens up to 991.98px) */
+@media (max-width: 768px) and (max-width: 991.98px) {
+    .hero-grid {
+        flex-direction: column-reverse; /* Flips order: Image goes top, text goes bottom */
+        gap: 32px;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        min-height: 350px; /* Set clean mobile presentation box */
+    }
+
+    .hero-badge {
+        margin: 0 auto 20px auto; /* Centers badge in text section */
+    }
+
+    .hero-buttons {
+        justify-content: center; /* Centers actions button blocks */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Reduces desktop size to prevent heading clipping */
+    }
+}
+
+/* sm (Small mobile screens) */
+@media (max-width: 575.98px) {
+    .hero {
+        padding: 40px 0 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        min-height: 260px; /* Compact presentation ratio for tiny devices */
+    }
+
+    .hero-buttons a {
+        width: 100%; /* Spans actions buttons full-width for easy thumb tapping */
+        justify-content: center;
+    }
+}

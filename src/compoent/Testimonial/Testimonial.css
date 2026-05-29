@@ -1,0 +1,85 @@
+/* Base Grid Container */
+.testimonial-grid {
+    display: grid;
+    /* auto-fit usually looks cleaner than auto-fill for reviews as it stretches cards to fill empty space on medium screens */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+/* Individual Testimonial Cards */
+.testi-card {
+    background: var(--color-white, #ffffff);
+    border-radius: 28px;
+    padding: 32px; /* Slightly increased for better breathability */
+    box-shadow: var(--shadow-card, 0 10px 30px rgba(0,0,0,0.02));
+    border: 1px solid #ecece4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keeps author details aligned at the bottom if text lengths vary */
+}
+
+/* Review Text Styling */
+.testi-text {
+    font-style: italic;
+    margin: 16px 0;
+    color: var(--color-gray-soft, #555555);
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* Author Section Layout */
+.testi-author {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column; /* Stack name and role vertically */
+    gap: 4px;
+}
+
+/* Author Name */
+.testi-author h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-dark-text, #333333);
+}
+
+/* Author Role Description */
+.testi-author span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-earth-brown, #8b5a2b);
+}
+
+/* Icon Wrapper Styling */
+.testi-icon {
+    margin-bottom: 8px;
+    display: inline-flex;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Tablet & Mobile Breakpoint */
+@media (max-width: 768px) {
+    .testimonial-grid {
+        /* Drop the minimum width slightly to prevent horizontal overflow on small displays */
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px; 
+    }
+
+    .testi-card {
+        padding: 24px; /* Tighter padding for smaller screens */
+        border-radius: 20px; /* Marginally sharper corners to match mobile aesthetics */
+    }
+}
+
+/* Extra Small Mobile Breakpoint */
+@media (max-width: 480px) {
+    .testimonial-grid {
+        /* Force a clean single-column structure on very tiny screens */
+        grid-template-columns: 1fr; 
+    }
+}

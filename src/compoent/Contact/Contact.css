@@ -1,0 +1,32 @@
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 48px 0;
+    }
+    .contact-info {
+      flex: 1;
+    }
+    .contact-form {
+      flex: 1;
+      background: var(--color-white);
+      padding: 32px;
+      border-radius: 28px;
+      box-shadow: var(--shadow-card);
+    }
+    .contact-info i {
+      color: var(--color-primary-green);
+      width: 32px;
+      margin-right: 12px;
+    }
+    .contact-info p {
+      margin: 20px 0;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid #ddd9ce;
+      margin-bottom: 18px;
+      font-family: 'Inter', sans-serif;
+    }

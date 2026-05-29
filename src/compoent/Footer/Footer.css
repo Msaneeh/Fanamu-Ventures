@@ -1,0 +1,159 @@
+.footer-section {
+  background: var(--color-earth-brown);
+  color: #FEF6E0;
+  padding: 80px 0 0; /* Heavy padding on top, bottom bar handles the base */
+  margin-top: 80px;
+  font-size: 0.95rem;
+}
+
+/* Master Grid Structure */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.footer-col h3 {
+  color: #FEF6E0;
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+
+.footer-col h3 span {
+  color: var(--color-leaf-green, #6CC24A);
+}
+
+.footer-col h4 {
+  color: var(--color-white, #FFFFFF);
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Accent Line decoration below heading */
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35px;
+  height: 2px;
+  background: var(--color-leaf-green, #6CC24A);
+}
+
+.footer-col p {
+  line-height: 1.6;
+  color: #E2DFD2;
+}
+
+/* Navigation Lists Layout */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #E2DFD2;
+  text-decoration: none;
+  transition: var(--transition-fast, 0.2s);
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-white);
+  padding-left: 4px; /* Soft slide effect on interaction */
+}
+
+/* Contact Column Alignment */
+.contact-col p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.contact-col svg {
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+
+/* Social Icon Badges */
+.social-text {
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  color: var(--color-earth-brown);
+  background: #FEF6E0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all var(--transition-fast, 0.2s);
+}
+
+.social-icons a:hover {
+  background: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Legal Bottom Divider Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(254, 246, 224, 0.15);
+  padding: 24px 0;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.08); /* Darkens base subtly */
+}
+
+.bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #D3CEB9;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr; /* Switch to balanced 2-column pattern */
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-section {
+    padding-top: 60px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr; /* Stack into a clean single line track on mobile phones */
+    gap: 32px;
+  }
+
+  .bottom-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
