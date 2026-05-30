@@ -1,14 +1,13 @@
 import './Training.css';
 import { Clipboard } from 'react-bootstrap-icons';
 
-
 const Training = () => {
 
   const trainingData = [
     { 
       title: "Poultry Farming Pro",
       duration: "2 weeks (Online/Offline)", 
-      price: "₦45,000", 
+      price: "Charged per hr", 
       cert: "Certificate Included", 
       image: "/assets/pultry-farm.jpg",
       features: "Feeding, health, housing, business plan" 
@@ -16,25 +15,25 @@ const Training = () => {
     { 
       title: "Fish Farming (Catfish)", 
       duration: "1 week intensive", 
-      price: "₦35,000", 
+      price: "Charged per hr", 
       cert: "Certificate + starter guide", 
       image: "/assets/fish-training.png",
       features: "Pond construction, feeding, harvesting" 
     },
     { 
-      title: "Commercial Farm Setup", // Made title unique
+      title: "Commercial Farm Setup", 
       duration: "Custom session", 
-      price: "₦20,000 - ₦80,000", 
+      price: "Charged per hr", 
       cert: "Action plan report", 
-      image: "/assets/consultation-1.png", // Moved to image path
+      image: "/assets/consultation-1.png", 
       features: "Land prep, biosecurity, marketing strategy" 
     },
     {
-      title: "Biosecurity Consultation", // Made title unique
+      title: "Biosecurity Consultation", 
       duration: "Custom session", 
-      price: "₦20,000 - ₦80,000", 
+      price: "Charged per hr", 
       cert: "Action plan report", 
-      image: "/assets/consultation-2.png", // Moved to image path
+      image: "/assets/consultation-2.png", 
       features: "Land prep, biosecurity, marketing strategy" 
     }
   ];
@@ -42,21 +41,16 @@ const Training = () => {
   return (
     <section id="training" style={{ background: '#F8F7F2', padding: '70px 0' }}>
       <div className="container">
-        <div className="section-header" style={{marginBottom: '30px'}}>
+        <div className="section-header" style={{ marginBottom: '30px' }}>
           <h2>Empower Your Agribusiness</h2>
           <p>Hands-on training & consultation — online & offline</p>
         </div>
 
-        {/* FIX 1: The grid container sits OUTSIDE the map function */}
         <div className="training-grid" id="trainingGrid">
-          
-          {/* FIX 2: Rename parameter to singular 'item' to avoid shadowing */}
           {trainingData.map((item) => {
             return (
-              /* FIX 3: Added unique key attribute */
               <div className="training-card" key={item.title}>
                 
-                {/* FIX 4: Render actual image element using your public image paths */}
                 <div className="training-image-wrapper">
                   <img src={item.image} alt={item.title} className="training-card-img" />
                 </div>
@@ -65,28 +59,33 @@ const Training = () => {
                 <div className="training-duration">{item.duration}</div>
                 <div className="price">{item.price}</div>
                 
-                {/* Integrated your imported Clipboard icon next to the certificate text */}
+                {/* Clean Bootstrap Icon Implementation */}
                 <div className="cert-badge">
-                  <Clipboard style={{ marginRight: '6px' }} /> {item.cert}
+                  <Clipboard size={16} className="cert-icon" /> 
+                  <span>{item.cert}</span>
                 </div>
                 
                 <p className="training-features">{item.features}</p>
               </div>
             );
           })}
-
         </div>
 
-        {/* Inline style property names fixed to camelCase */}
+        {/* Primary Action Button directed straight to your WhatsApp line */}
         <div style={{ textAlign: 'center', marginTop: '48px' }}>
-          <a href="#contact" className="btn-primary" style={{ background: '#0B8F3A' }}>
-            <i className="fas fa-clipboard-list"></i> Register Now →
+          <a 
+            href="https://wa.me/2348026118121?text=Hello,%20I%20would%20like%20to%20register%20for%20your%20training%20and%20consultancy%20sessions." 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary" 
+            style={{ background: '#0B8F3A', textDecoration: 'none', display: 'inline-block' }}
+          >
+            Register Now →
           </a>
         </div>
       </div>
     </section>
   );
 };
-
 
 export default Training;
