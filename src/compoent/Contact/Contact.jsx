@@ -27,7 +27,7 @@ const Contact = () => {
             </p>
             <p>
               <EnvelopeFill size={24} color="var(--color-primary-green)" style={{ marginRight: '12px' }} /> 
-              <a href="mailto:hello@fanamuventures.com" style={{ color: 'inherit', textDecoration: 'none' }}>hello@fanamuventures.com</a>
+              <a href="mailto:hello@fanamuventures.com" style={{ color: 'inherit', textDecoration: 'none' }}>fanamu2020@gmail.com</a>
             </p>
             <p>
               <GeoAltFill size={24} color="var(--color-earth-brown)" style={{ marginRight: '12px' }} /> 

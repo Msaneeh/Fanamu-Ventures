@@ -42,7 +42,7 @@ const Footer = () => {
           <p>
             <EnvelopeFill /> 
             <a href="mailto:hello@fanamuventures.com" style={{ color: 'inherit', textDecoration: 'none', marginLeft: '5px' }}>
-              hello@fanamuventures.com
+              fanamu2020@gmail.com
             </a>
           </p>
           <p><GeoAltFill /> <span style={{ marginLeft: '5px' }}>No 12 Farm Settlement, Ibadan, Nigeria</span></p>
