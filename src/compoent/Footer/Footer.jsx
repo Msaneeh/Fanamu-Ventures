@@ -45,7 +45,9 @@ const Footer = () => {
               fanamu2020@gmail.com
             </a>
           </p>
-          <p><GeoAltFill /> <span style={{ marginLeft: '5px' }}>No 12 Farm Settlement, Ibadan, Nigeria</span></p>
+          <p><GeoAltFill /> <span style={{ marginLeft: '5px' }}>Brigade, Gwagwarwa, Kano, Nigeria
+
+</span></p>
         </div>
 
         {/* Column 4: Social Communities */}
